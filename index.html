@@ -1,0 +1,1054 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <!-- Mobile-first viewport -->
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+  >
+
+  <!-- Mobile browser appearance -->
+  <meta name="theme-color" content="#09090b">
+  <meta name="color-scheme" content="dark">
+
+  <!-- iPhone / Android web-app support -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta
+    name="apple-mobile-web-app-status-bar-style"
+    content="black-translucent"
+  >
+
+  <!-- Prevent automatic phone-number detection -->
+  <meta
+    name="format-detection"
+    content="telephone=no"
+  >
+
+  <meta
+    name="description"
+    content="A cinematic birthday experience made especially for Sheru."
+  >
+
+  <meta name="robots" content="noindex, nofollow">
+
+  <title>For Sheru — A Birthday Story</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- =====================================================
+       CINEMATIC LOADER
+       ===================================================== -->
+
+  <div
+    id="loader"
+    class="loader"
+    aria-live="polite"
+  >
+    <div class="loader-inner">
+
+      <div class="loader-kicker">
+        A tiny cinematic surprise
+      </div>
+
+      <div
+        id="loaderText"
+        class="loader-text"
+      >
+        Loading 3 years of memories...
+      </div>
+
+      <div
+        class="loader-bar"
+        aria-hidden="true"
+      >
+        <span id="loaderProgress"></span>
+      </div>
+
+      <div
+        class="loader-percent"
+        id="loaderPercent"
+      >
+        0%
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- =====================================================
+       INTRO
+       ===================================================== -->
+
+  <div
+    id="intro"
+    class="intro"
+  >
+
+    <canvas
+      id="particleCanvas"
+      aria-hidden="true"
+    ></canvas>
+
+    <div
+      class="intro-vignette"
+      aria-hidden="true"
+    ></div>
+
+    <div class="intro-content">
+
+      <p class="eyebrow reveal">
+        For someone very special
+      </p>
+
+      <p class="intro-small reveal">
+        Hey, Sheru...
+      </p>
+
+      <h1 class="hero-name reveal">
+        SHERU
+      </h1>
+
+      <p class="intro-sub reveal">
+        Someone made something special for you.
+      </p>
+
+      <button
+        id="openSurprise"
+        class="btn btn-primary reveal"
+        type="button"
+      >
+        OPEN YOUR SURPRISE
+        <span aria-hidden="true">✦</span>
+      </button>
+
+    </div>
+
+    <div class="scroll-hint">
+      there's more
+      <span aria-hidden="true">↓</span>
+    </div>
+
+  </div>
+
+
+  <!-- =====================================================
+       MAIN EXPERIENCE
+       ===================================================== -->
+
+  <main
+    id="experience"
+    class="hidden"
+  >
+
+    <!-- Story navigation -->
+
+    <nav
+      class="story-nav"
+      aria-label="Story navigation"
+    >
+
+      <button
+        class="story-dot active"
+        data-target="birthday"
+        aria-label="Beginning"
+        type="button"
+      ></button>
+
+      <button
+        class="story-dot"
+        data-target="memories"
+        aria-label="Memories"
+        type="button"
+      ></button>
+
+      <button
+        class="story-dot"
+        data-target="quiz"
+        aria-label="Quiz"
+        type="button"
+      ></button>
+
+      <button
+        class="story-dot"
+        data-target="game"
+        aria-label="Game"
+        type="button"
+      ></button>
+
+      <button
+        class="story-dot"
+        data-target="letters"
+        aria-label="Letters"
+        type="button"
+      ></button>
+
+      <button
+        class="story-dot"
+        data-target="surprise"
+        aria-label="Surprise"
+        type="button"
+      ></button>
+
+      <button
+        class="story-dot"
+        data-target="finale"
+        aria-label="Final"
+        type="button"
+      ></button>
+
+    </nav>
+
+
+    <div
+      class="ambient-glow"
+      aria-hidden="true"
+    ></div>
+
+
+    <!-- ===================================================
+         BIRTHDAY
+         =================================================== -->
+
+    <section
+      id="birthday"
+      class="section birthday-section"
+    >
+
+      <div class="section-inner center">
+
+        <p class="eyebrow">
+          Today is about one person
+        </p>
+
+        <h2 class="display">
+          HAPPY
+          <br>
+          <em>BIRTHDAY,</em>
+          <br>
+          SHRIYANI
+          <span aria-hidden="true">♥</span>
+        </h2>
+
+        <p class="lead">
+          Today isn't just another day...
+        </p>
+
+        <p class="lead soft">
+          it's the day one of my favorite people
+          got another year of being amazing.
+        </p>
+
+        <div class="stat-strip">
+
+          <div>
+            <strong>3</strong>
+            <span>YEARS</span>
+          </div>
+
+          <div>
+            <strong>∞</strong>
+            <span>MEMORIES</span>
+          </div>
+
+          <div>
+            <strong>1</strong>
+            <span>SHERU</span>
+          </div>
+
+        </div>
+
+        <p class="hint">
+          Keep going. There's something waiting
+          for you later 👀
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         STORY
+         =================================================== -->
+
+    <section
+      id="story"
+      class="section story-section"
+    >
+
+      <div class="section-inner split">
+
+        <div class="story-copy">
+
+          <p class="eyebrow">
+            Chapter 01 · The beginning
+          </p>
+
+          <h2 class="title">
+            We met in
+            <em>10th.</em>
+          </h2>
+
+          <p>
+            Somehow, three years later...
+          </p>
+
+          <p>
+            you're still here.
+          </p>
+
+          <p class="accent-line">
+            And somehow, I'm still your favorite idiot. 😂
+          </p>
+
+          <span class="tiny-note">
+            — allegedly.
+          </span>
+
+        </div>
+
+
+        <div
+          class="photo-frame story-frame"
+          data-photo="0"
+        >
+
+          <div class="photo-placeholder">
+            PHOTO 01
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         MEMORIES
+         =================================================== -->
+
+    <section
+      id="memories"
+      class="section memories-section"
+    >
+
+      <div class="section-inner">
+
+        <div class="section-heading">
+
+          <p class="eyebrow">
+            Chapter 02 · Memory unlocked
+          </p>
+
+          <h2 class="title">
+            Little pieces of
+            <em>us.</em>
+          </h2>
+
+          <p>
+            Not a gallery. Just a few moments
+            that deserve to stay.
+          </p>
+
+        </div>
+
+
+        <div
+          id="memoryRail"
+          class="memory-rail"
+          aria-label="Memory photos"
+        ></div>
+
+
+        <div class="memory-line">
+          You're not done yet 👀
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         QUIZ
+         =================================================== -->
+
+    <section
+      id="quiz"
+      class="section quiz-section"
+    >
+
+      <div class="section-inner narrow">
+
+        <p class="eyebrow">
+          Chapter 03 · The interrogation
+        </p>
+
+        <h2 class="title">
+          How well do you really know us?
+          <em>👀</em>
+        </h2>
+
+
+        <div class="quiz-card">
+
+          <div class="quiz-meta">
+
+            <span id="quizCount">
+              Question 1 / 8
+            </span>
+
+            <span id="quizScore">
+              Score 0
+            </span>
+
+          </div>
+
+
+          <div class="quiz-progress">
+            <span id="quizProgress"></span>
+          </div>
+
+
+          <h3 id="quizQuestion"></h3>
+
+
+          <div
+            id="quizOptions"
+            class="quiz-options"
+          ></div>
+
+
+          <div
+            id="quizFeedback"
+            class="quiz-feedback"
+            aria-live="polite"
+          ></div>
+
+
+          <button
+            id="nextQuestion"
+            class="btn btn-secondary hidden"
+            type="button"
+          >
+            NEXT →
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         GAME
+         =================================================== -->
+
+    <section
+      id="game"
+      class="section game-section"
+    >
+
+      <div class="section-inner narrow center">
+
+        <p class="eyebrow">
+          Chapter 04 · Serious business
+        </p>
+
+        <h2 class="title">
+          Catch the Hearts
+          <em>♥</em>
+        </h2>
+
+        <p>
+          30 seconds. Tap the hearts.
+          Try not to embarrass yourself.
+        </p>
+
+
+        <div class="game-shell">
+
+          <div class="game-hud">
+
+            <span>
+              TIME
+              <b id="gameTime">30</b>
+            </span>
+
+            <span>
+              SCORE
+              <b id="gameScore">0</b>
+            </span>
+
+          </div>
+
+
+          <div
+            id="gameBoard"
+            class="game-board"
+            aria-label="Catch the Hearts game area"
+          ></div>
+
+
+          <button
+            id="startGame"
+            class="btn btn-primary"
+            type="button"
+          >
+            START GAME ♥
+          </button>
+
+
+          <div
+            id="gameResult"
+            class="game-result"
+            aria-live="polite"
+          ></div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         LETTER
+         =================================================== -->
+
+    <section
+      id="letters"
+      class="section letters-section"
+    >
+
+      <div class="section-inner narrow">
+
+        <p class="eyebrow">
+          Chapter 05 · From your favorite idiot
+        </p>
+
+        <h2 class="title">
+          A little something
+          <em>for you.</em>
+        </h2>
+
+
+        <article class="letter-card">
+
+          <div
+            class="paper-corner"
+            aria-hidden="true"
+          ></div>
+
+          <div
+            id="birthdayLetter"
+            class="letter-text"
+          ></div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         COMPLIMENT
+         =================================================== -->
+
+    <section
+      id="compliments"
+      class="section compliment-section"
+    >
+
+      <div class="section-inner center narrow">
+
+        <p class="eyebrow">
+          A public service announcement
+        </p>
+
+        <h2 class="title">
+          Need a reminder?
+          <em>✨</em>
+        </h2>
+
+        <p>
+          Press the button. Receive a compliment.
+          Pretend you're not smiling.
+        </p>
+
+
+        <button
+          id="complimentBtn"
+          class="btn btn-secondary"
+          type="button"
+        >
+          TELL ME SOMETHING NICE
+        </button>
+
+
+        <div
+          id="complimentOutput"
+          class="compliment-output"
+          aria-live="polite"
+        >
+          ...
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         OPEN WHEN
+         =================================================== -->
+
+    <section
+      id="openwhen"
+      class="section openwhen-section"
+    >
+
+      <div class="section-inner">
+
+        <div class="section-heading center">
+
+          <p class="eyebrow">
+            For future Sheru emergencies
+          </p>
+
+          <h2 class="title">
+            Open when...
+            <em>💌</em>
+          </h2>
+
+        </div>
+
+
+        <div
+          id="openWhenGrid"
+          class="openwhen-grid"
+        ></div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         FRIENDSHIP SCORE
+         =================================================== -->
+
+    <section
+      id="friendship"
+      class="section friendship-section"
+    >
+
+      <div class="section-inner center">
+
+        <p class="eyebrow">
+          Officially unofficial
+        </p>
+
+        <h2 class="title">
+          SHERU + HER FAVORITE IDIOT
+        </h2>
+
+
+        <div class="friendship-score">
+
+          <span id="friendshipNumber">
+            0
+          </span>
+
+          <small>%</small>
+
+        </div>
+
+
+        <p class="score-caption">
+          FRIENDSHIP LEVEL
+        </p>
+
+
+        <div class="score-lines">
+
+          <p>
+            3 years survived.
+          </p>
+
+          <p>
+            Somehow we're still friends.
+          </p>
+
+          <p class="accent-line">
+            Honestly impressive. 💀
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         SECRET SURPRISE
+         =================================================== -->
+
+    <section
+      id="surprise"
+      class="section surprise-section"
+    >
+
+      <div class="section-inner center narrow">
+
+        <p class="eyebrow">
+          Chapter 06 · Don't peek
+        </p>
+
+        <h2 class="title">
+          One last surprise...
+          <em>🔐</em>
+        </h2>
+
+
+        <div
+          id="lock"
+          class="lock-wrap"
+        >
+
+          <div
+            class="lock-icon"
+            aria-hidden="true"
+          >
+            ⌾
+          </div>
+
+          <p id="lockStatus">
+            There may or may not be something here.
+          </p>
+
+          <button
+            id="unlockBtn"
+            class="btn btn-primary"
+            type="button"
+          >
+            UNLOCK
+          </button>
+
+        </div>
+
+
+        <div
+          id="secretReveal"
+          class="secret-reveal hidden"
+        >
+
+          <div
+            id="suspenseText"
+            class="suspense-text"
+          >
+            Preparing your surprise...
+          </div>
+
+
+          <div
+            id="secretContent"
+            class="secret-content hidden"
+          >
+
+            <p>
+              <strong>Me:</strong>
+              “I have a surprise for your birthday.”
+              🎁
+            </p>
+
+            <p>
+              <strong>Her:</strong>
+              “OMG really?? 🥹❤️”
+            </p>
+
+            <div class="secret-divider">
+              ↓
+            </div>
+
+            <p class="secret-punchline">
+
+              <strong>The surprise:</strong>
+              <br>
+
+              Me reminding her of all the embarrassing
+              things she has done over the last 3 years. 💀
+
+            </p>
+
+            <h3>
+              Happy Birthday, Sheru! 😂❤️
+            </h3>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         FINALE
+         =================================================== -->
+
+    <section
+      id="finale"
+      class="section finale-section"
+    >
+
+      <div class="final-photo-wrap">
+
+        <div
+          id="finalPhoto"
+          class="photo-frame final-photo"
+          data-photo="11"
+        >
+
+          <div class="photo-placeholder">
+            PHOTO 12
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="section-inner center narrow finale-copy">
+
+        <p class="eyebrow">
+          Okay... jokes aside.
+        </p>
+
+
+        <h2 class="title">
+          There is one thing I actually want
+          you to remember.
+        </h2>
+
+
+        <p class="final-message">
+          You'll always have someone who is genuinely
+          grateful that you came into their life.
+        </p>
+
+
+        <h2 class="display mini">
+
+          HAPPY
+          <br>
+
+          BIRTHDAY,
+          <br>
+
+          <em>SHERU ❤️</em>
+
+        </h2>
+
+
+        <p>
+          Thank you for being there for me.
+        </p>
+
+        <p>
+          Stay caring.
+          <br>
+          Stay funny.
+          <br>
+          Stay cute.
+          <br>
+          Stay the same crazy person.
+        </p>
+
+
+        <p class="accent-line">
+          And please continue giving me advice
+          even though I rarely listen. 😂
+        </p>
+
+
+        <p class="signature">
+          — Your Favorite Idiot ❤️😂
+        </p>
+
+
+        <div
+          id="finalJoke"
+          class="final-joke hidden"
+        >
+
+          <p>
+            Wait...
+          </p>
+
+          <p>
+            One last thing.
+          </p>
+
+          <h3>
+            We're still going to those car showrooms,
+            right? 🚗💀
+          </h3>
+
+          <h2>
+            HAPPY BIRTHDAY SHERU ❤️
+          </h2>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ===================================================
+         FOOTER
+         =================================================== -->
+
+    <footer class="footer">
+
+      <p>
+        Made with ❤️ for Sheru
+      </p>
+
+      <p>
+        From her favorite idiot 😂
+      </p>
+
+      <button
+        id="replay"
+        class="btn btn-ghost"
+        type="button"
+      >
+        RELIVE THE CHAOS ↻
+      </button>
+
+    </footer>
+
+  </main>
+
+
+  <!-- =====================================================
+       PHOTO MODAL
+       ===================================================== -->
+
+  <div
+    id="photoModal"
+    class="photo-modal"
+    aria-hidden="true"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Photo viewer"
+  >
+
+    <button
+      id="closePhoto"
+      class="modal-close"
+      aria-label="Close photo"
+      type="button"
+    >
+      ×
+    </button>
+
+    <div class="modal-photo-wrap">
+
+      <img
+        id="modalPhoto"
+        alt=""
+        decoding="async"
+      >
+
+    </div>
+
+    <p id="modalCaption"></p>
+
+  </div>
+
+
+  <!-- =====================================================
+       MUSIC
+       ===================================================== -->
+
+  <audio
+    id="music"
+    preload="none"
+    loop
+  ></audio>
+
+
+  <div
+    id="musicPlayer"
+    class="music-player hidden"
+  >
+
+    <button
+      id="musicToggle"
+      type="button"
+      aria-label="Play music"
+    >
+      ▶
+    </button>
+
+    <div class="music-info">
+
+      <strong id="musicTitle">
+        her
+      </strong>
+
+      <span>
+        JVKE
+      </span>
+
+    </div>
+
+
+    <div
+      class="music-bars"
+      aria-hidden="true"
+    >
+
+      <i></i>
+      <i></i>
+      <i></i>
+      <i></i>
+
+    </div>
+
+  </div>
+
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+
+</body>
+</html>
